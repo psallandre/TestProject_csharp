@@ -1,0 +1,9 @@
+# ipch directory
+ipch/
+bin/
+obj/
+*.suo
+*.sdf
+*.opensdf
+*.pch
+
