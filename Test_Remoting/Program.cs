@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace FormProj
+namespace Test_Remoting
 {
 	static class Program
 	{
@@ -15,10 +15,6 @@ namespace FormProj
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-
-			var f2 = new Form2();
-			f2.Show();
-
 			Application.Run(new Form1());
 		}
 	}

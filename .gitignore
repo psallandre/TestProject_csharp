@@ -6,4 +6,6 @@ obj/
 *.sdf
 *.opensdf
 *.pch
+*.user
+
 
