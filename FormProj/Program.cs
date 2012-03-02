@@ -19,6 +19,8 @@ namespace FormProj
 			var f2 = new Form2();
 			f2.Show();
 
+			Test_EF test = new Test_EF();
+
 			Application.Run(new Form1());
 		}
 	}
