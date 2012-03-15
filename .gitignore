@@ -1,4 +1,4 @@
-# ipch directory
+#http://gitready.com/beginner/2009/01/19/ignoring-files.html
 ipch/
 bin/
 obj/
@@ -7,5 +7,22 @@ obj/
 *.opensdf
 *.pch
 *.user
+*.dbmdl
+_Resharper*/
 
-
+#exemple from https://github.com/davidfowl/JabbR/blob/master/.gitignore
+#[Oo]bj/
+#[Bb]in/
+#*.user
+#/TestResults
+#*.vspscc
+#*.vssscc
+#deploy
+#deploy/*
+#*.suo
+#*.cache
+#*.bak
+#packages/
+#msbuild.log
+#_Resharper*/
+#_AzurePackage/
