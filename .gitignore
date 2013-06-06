@@ -2,13 +2,15 @@
 ipch/
 bin/
 obj/
+Deploy/
+packages/*/
+_Resharper*/
 *.suo
+*.user
 *.sdf
 *.opensdf
 *.pch
-*.user
 *.dbmdl
-_Resharper*/
 
 #exemple from https://github.com/davidfowl/JabbR/blob/master/.gitignore
 #[Oo]bj/
