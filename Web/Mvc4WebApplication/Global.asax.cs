@@ -18,7 +18,6 @@ namespace Mvc4WebApplication
   {
     protected void Application_Start()
     {
-      //Database.SetInitializer(new DubaiInitializerWeb());
       Database.SetInitializer(new MigrateDatabaseToLatestVersion<DubaiDbContext, Configuration>());
 
       using (var ctx = new DubaiDbContext())

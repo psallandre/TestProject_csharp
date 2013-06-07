@@ -5,6 +5,9 @@ obj/
 Deploy/
 packages/*/
 _Resharper*/
+_tmp/
+*.mdf
+*.ldf
 *.suo
 *.user
 *.sdf
