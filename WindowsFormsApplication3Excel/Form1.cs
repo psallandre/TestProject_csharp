@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 //
+using Microsoft.CSharp;
 using Microsoft.Office.Interop.Excel;
 using System.Reflection;							//pour Missing
 using System.IO;
@@ -15,7 +16,7 @@ namespace WindowsFormsApplication3Excel
 {
 	public partial class Form1 : Form
 	{
-		Microsoft.Office.Interop.Excel.ApplicationClass excelApp = new ApplicationClass();
+    Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
 
 		string filename = @"\file.txt";
 
