@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using JobTest3;
 namespace ConsoleProj
 {
 	class Program
@@ -11,8 +12,11 @@ namespace ConsoleProj
 		{
 			//Test_BeginInvoke.Test();
 			test_MultipleInheritance.test();
-
-			Console.ReadKey();
+            //Main1.Run();
+            //Main2.Run();
+            //Main3.Run();
+            Main4.Run();
+            Console.ReadKey();
 		}
 	}
 }
