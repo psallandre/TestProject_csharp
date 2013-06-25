@@ -1,0 +1,24 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "cloud"]
+	url = git@github.com:psallandre/TestProject_csharp.git
+	fetch = +refs/heads/*:refs/remotes/cloud/*
+[remote "cloudh"]
+	url = http://github.com/psallandre/TestProject_csharp.git
+	fetch = +refs/heads/*:refs/remotes/cloud/*
+[remote "cloudhs"]
+	url = https://github.com/psallandre/TestProject_csharp.git
+	fetch = +refs/heads/*:refs/remotes/cloud/*
+[remote "origin"]
+	url = e:/repogit/TestProject_csharp.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = cloud
+	merge = refs/heads/master
+	rebase = true
