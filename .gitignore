@@ -6,6 +6,7 @@ Deploy/
 packages/*/
 _Resharper*/
 _tmp/
+/TestResults
 *.mdf
 *.ldf
 *.suo

@@ -6,8 +6,8 @@
     <ProjectGuid>{3DB70A60-F683-42A3-AB8A-35F6E1855EEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject1</RootNamespace>
-    <AssemblyName>UnitTestProject1</AssemblyName>
+    <RootNamespace>Tools.Test</RootNamespace>
+    <AssemblyName>Tools.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -68,13 +68,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="MathFunctionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Console\ConsoleProj.csproj">
-      <Project>{8d987d6c-ef0f-4af3-bb19-33c8231e1aaf}</Project>
-      <Name>ConsoleProj</Name>
+    <ProjectReference Include="..\..\Tools\Tools.csproj">
+      <Project>{dcd418af-f30e-4e5e-ab1b-81f42553d949}</Project>
+      <Name>Tools</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

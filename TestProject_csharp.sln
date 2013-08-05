@@ -33,7 +33,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{325F10
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{3DB70A60-F683-42A3-AB8A-35F6E1855EEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.Test", ".UnitTest\Tools.Test\Tools.Test.csproj", "{3DB70A60-F683-42A3-AB8A-35F6E1855EEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Remoting", "Remoting", "{B27EDC5F-4F32-4584-9C75-B8324249192E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".UnitTest", ".UnitTest", "{40596AD0-D1BF-4752-A11E-DF60FF1AC017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{DCD418AF-F30E-4E5E-AB1B-81F42553D949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,11 +112,20 @@ Global
 		{3DB70A60-F683-42A3-AB8A-35F6E1855EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DB70A60-F683-42A3-AB8A-35F6E1855EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3DB70A60-F683-42A3-AB8A-35F6E1855EEB}.Release|x86.ActiveCfg = Release|x86
+		{DCD418AF-F30E-4E5E-AB1B-81F42553D949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD418AF-F30E-4E5E-AB1B-81F42553D949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD418AF-F30E-4E5E-AB1B-81F42553D949}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DCD418AF-F30E-4E5E-AB1B-81F42553D949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD418AF-F30E-4E5E-AB1B-81F42553D949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD418AF-F30E-4E5E-AB1B-81F42553D949}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{7679B1B3-AE68-4DD6-90BC-D8699579CA3C} = {B27EDC5F-4F32-4584-9C75-B8324249192E}
+		{EFD23F11-7A0D-496A-91ED-EA477503E210} = {B27EDC5F-4F32-4584-9C75-B8324249192E}
 		{19215634-294C-4CA2-ABF8-104697EE9829} = {D01060E4-10FB-45D5-9156-8D5C3676DB15}
+		{3DB70A60-F683-42A3-AB8A-35F6E1855EEB} = {40596AD0-D1BF-4752-A11E-DF60FF1AC017}
 	EndGlobalSection
 EndGlobal
