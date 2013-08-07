@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="MathFunctionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceEqualsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Tools\Tools.csproj">
