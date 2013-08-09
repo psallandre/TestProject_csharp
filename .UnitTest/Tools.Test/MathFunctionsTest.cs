@@ -55,15 +55,39 @@ namespace Tools.Test
 
       [TestMethod]
       public void FibonaciShouldbeOkFor() {
-         FibonaciShouldbeOk(1, 0);
-         //FibonaciShouldbeOk(1, 1);
-         //FibonaciShouldbeOk(2, 2);
-         //FibonaciShouldbeOk(6, 3);
-         //FibonaciShouldbeOk(24, 4);
+         FibonaciShouldbeOk(0, 0);
+         FibonaciShouldbeOk(1, 1);
+         FibonaciShouldbeOk(1, 2);
+         FibonaciShouldbeOk(2, 3);
+         FibonaciShouldbeOk(3, 4);
+         FibonaciShouldbeOk(5, 5);
+         FibonaciShouldbeOk(8, 6);
+         FibonaciShouldbeOk(13, 7);
+         FibonaciShouldbeOk(21, 8);
       }
 
       public void FibonaciShouldbeOk(int expected, int param) {
          Assert.AreEqual(expected, MathFunctions.Fibonaci(param));
+      }
+
+      [TestMethod]
+      public void FibonaciShould_NotBeIteratif() {
+          int n = 40;
+          var sw = new Stopwatch();
+          sw.Start();
+          MathFunctions.Fibonaci(n);
+          sw.Stop();
+          Assert.IsTrue(sw.ElapsedMilliseconds < 500);
+      }
+
+      [TestMethod]
+      public void FibonaciShould_NotBeIteratifWithMemorize() {
+          int n = 20000;
+          var sw = new Stopwatch();
+          sw.Start();
+          MathFunctions.Fibonaci(n);
+          sw.Stop();
+          Assert.IsTrue(sw.ElapsedMilliseconds < 1);
       }
       #endregion
    }
