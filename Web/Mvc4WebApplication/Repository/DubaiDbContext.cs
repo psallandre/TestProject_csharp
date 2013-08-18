@@ -21,25 +21,12 @@ namespace Mvc4WebApplication.Repository
     }
   }
 
-  internal sealed class Configuration : DbMigrationsConfiguration<DubaiDbContext>
-  {
-    public Configuration()
-    {
-      AutomaticMigrationsEnabled = true;
-      AutomaticMigrationDataLossAllowed = true;
-    }
-
-    protected override void Seed(DubaiDbContext context)
-    {
-      DubaiDbContextSeedWeb.Seed(context);
-    }
-  }
-
   public class InstrumentMaturityConfiguration : EntityTypeConfiguration<InstrumentMaturity>
   {
     public InstrumentMaturityConfiguration()
     {
-      HasKey(x => new { x.InstrumentName, x.Maturity });
+      //HasKey(x => new { x.InstrumentName, x.Maturity });
+        HasKey(x => x.Id);
 
       Ignore(x => x.MaturityToString);
       Ignore(x => x.LastInterestToString);
@@ -82,13 +69,9 @@ namespace Mvc4WebApplication.Repository
     public static void Seed(DubaiDbContext context)
     {
       MembershipCreateStatus createStatus;
-      Membership.CreateUser("David", "123456", "david.mourrat@ca-cib.com", passwordQuestion: null, passwordAnswer: null,
+      Membership.CreateUser("Patrice", "123456", "patrice@sallandre.com", passwordQuestion: null, passwordAnswer: null,
                             isApproved: true, providerUserKey: null, status: out createStatus);
-      Membership.CreateUser("Patrice", "123456", "patrice.sallandre-prestataire@ca-cib.com", passwordQuestion: null, passwordAnswer: null,
-                            isApproved: true, providerUserKey: null, status: out createStatus);
-      Membership.CreateUser("Thibaut", "123456", "thibaut.fourment@ca-cib.com", passwordQuestion: null, passwordAnswer: null,
-                            isApproved: true, providerUserKey: null, status: out createStatus);
-      Membership.CreateUser("Xavier", "123456", "xavier.desoindre@ca-cib.com", passwordQuestion: null, passwordAnswer: null,
+      Membership.CreateUser("user2", "123456", "user@company.com", passwordQuestion: null, passwordAnswer: null,
                             isApproved: true, providerUserKey: null, status: out createStatus);
 
       if (!Roles.RoleExists("Admin"))
@@ -97,8 +80,6 @@ namespace Mvc4WebApplication.Repository
       }
       if (!Roles.IsUserInRole("Patrice", "Admin"))
         Roles.AddUserToRole("Patrice", "Admin");
-      if (!Roles.IsUserInRole("David", "Admin"))
-        Roles.AddUserToRole("David", "Admin");
 
       //context.Roles.AddOrUpdate(r => r.Name, new Role { Name = "Admin" });
 

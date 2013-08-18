@@ -1,4 +1,5 @@
-﻿using Mvc4WebApplication.Repository;
+﻿using Mvc4WebApplication.Migrations;
+using Mvc4WebApplication.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

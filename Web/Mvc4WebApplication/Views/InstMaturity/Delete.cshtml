@@ -1,0 +1,54 @@
+﻿@model Mvc4WebApplication.Models.InstrumentMaturity
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>InstrumentMaturity</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstrumentName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstrumentName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Maturity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Maturity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaturityToString)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaturityToString)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastInterestToString)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastInterestToString)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

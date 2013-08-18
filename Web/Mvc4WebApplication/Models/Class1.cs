@@ -8,6 +8,8 @@ namespace Mvc4WebApplication.Models
 {
   public class InstrumentMaturity
   {
+      public int Id { get; set; }
+
     public string InstrumentName { get; set; }
     public DateTime Maturity { get; set; }
     public decimal Price { get; set; }

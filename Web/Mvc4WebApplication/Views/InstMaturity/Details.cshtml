@@ -1,0 +1,50 @@
+﻿@model Mvc4WebApplication.Models.InstrumentMaturity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>InstrumentMaturity</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstrumentName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstrumentName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Maturity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Maturity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaturityToString)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaturityToString)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastInterestToString)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastInterestToString)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
