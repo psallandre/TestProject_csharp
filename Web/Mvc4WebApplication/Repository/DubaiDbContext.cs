@@ -50,7 +50,7 @@ namespace Mvc4WebApplication.Repository
                                        new InstrumentMaturity()
                                          {
                                            InstrumentName = instrumentName,
-                                           Maturity = new DateTime(2012, 12, 01),
+                                           Maturity = new DateTime(2012, 12, 25),
                                            Price = 59.75m
                                          }
                                      };
