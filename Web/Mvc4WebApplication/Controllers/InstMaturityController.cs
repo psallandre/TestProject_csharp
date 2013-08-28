@@ -25,7 +25,7 @@ namespace Mvc4WebApplication.Controllers
         //
         // GET: /InstMaturity/Details/5
 
-        public ActionResult Details(int id = 0)
+        public ActionResult Details(string id = null)
         {
             InstrumentMaturity instrumentmaturity = db.Maturities.Find(id);
             if (instrumentmaturity == null)
@@ -63,9 +63,10 @@ namespace Mvc4WebApplication.Controllers
         //
         // GET: /InstMaturity/Edit/5
 
-        public ActionResult Edit(int id = 0)
+        public ActionResult Edit(string name, DateTime maturity)
         {
-            InstrumentMaturity instrumentmaturity = db.Maturities.Find(id);
+            //InstrumentMaturity instrumentmaturity = db.Maturities.Find(id);
+            InstrumentMaturity instrumentmaturity = db.Maturities.Find(new object[] { name, maturity });
             if (instrumentmaturity == null)
             {
                 return HttpNotFound();
@@ -92,7 +93,7 @@ namespace Mvc4WebApplication.Controllers
         //
         // GET: /InstMaturity/Delete/5
 
-        public ActionResult Delete(int id = 0)
+        public ActionResult Delete(string id = null)
         {
             InstrumentMaturity instrumentmaturity = db.Maturities.Find(id);
             if (instrumentmaturity == null)
@@ -107,7 +108,7 @@ namespace Mvc4WebApplication.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             InstrumentMaturity instrumentmaturity = db.Maturities.Find(id);
             db.Maturities.Remove(instrumentmaturity);

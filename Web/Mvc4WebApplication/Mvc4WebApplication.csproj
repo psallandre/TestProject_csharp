@@ -211,7 +211,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\InstrumentMaturity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\DubaiDbContext.cs" />
     <Compile Include="SignalR.Sample\AppStart.cs" />
@@ -340,11 +340,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\InstMaturity\Create.cshtml" />
-    <Content Include="Views\InstMaturity\Delete.cshtml" />
-    <Content Include="Views\InstMaturity\Details.cshtml" />
-    <Content Include="Views\InstMaturity\Edit.cshtml" />
     <Content Include="Views\InstMaturity\Index.cshtml" />
+    <Content Include="Views\InstMaturity\Details.cshtml" />
+    <Content Include="Views\InstMaturity\Create.cshtml" />
+    <Content Include="Views\InstMaturity\Edit.cshtml" />
+    <Content Include="Views\InstMaturity\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

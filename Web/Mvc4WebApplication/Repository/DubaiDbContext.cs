@@ -25,8 +25,8 @@ namespace Mvc4WebApplication.Repository
   {
     public InstrumentMaturityConfiguration()
     {
-      //HasKey(x => new { x.InstrumentName, x.Maturity });
-        HasKey(x => x.Id);
+      HasKey(x => new { x.InstrumentName, x.Maturity });
+        //HasKey(x => x.Id);
 
       Ignore(x => x.MaturityToString);
       Ignore(x => x.LastInterestToString);
