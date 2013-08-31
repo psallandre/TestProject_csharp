@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bench.cs" />
     <Compile Include="EnglishFrench_DataDataSet.cs">
       <DependentUpon>EnglishFrench_DataDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
