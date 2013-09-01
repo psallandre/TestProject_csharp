@@ -1,4 +1,5 @@
 ﻿using Mvc4WebApplication.Migrations;
+using Mvc4WebApplication.Models.Binders;
 using Mvc4WebApplication.Repository;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,9 @@ namespace Mvc4WebApplication
       RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
       AuthConfig.RegisterAuth();
+
+      //http://stackoverflow.com/questions/7835614/asp-net-mvc3-datetime-format/7836093#7836093
+      //ModelBinders.Binders.Add(typeof(DateTime), new MyDateTimeModelBinder());
     }
   }
 }

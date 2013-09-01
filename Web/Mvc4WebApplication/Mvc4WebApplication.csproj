@@ -212,7 +212,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Binders\MyDateTimeModelBinder.cs" />
     <Compile Include="Models\InstrumentMaturity.cs" />
+    <Compile Include="Models\Validation\MyCustomValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\DubaiDbContext.cs" />
     <Compile Include="SignalR.Sample\AppStart.cs" />
