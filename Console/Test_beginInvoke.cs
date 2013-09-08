@@ -9,19 +9,19 @@ namespace ConsoleProj
 {
 	static public class Test_BeginInvoke
 	{
-		static void WriteLineWithThread(string format, params object[] arg)
+		static void WriteLineWithThreadId(string format, params object[] arg)
 		{
 			Console.Write("Thread {0}. ", Thread.CurrentThread.ManagedThreadId);
 			Console.WriteLine(format, arg);
 		}
 		static void FuncA()
 		{
-			WriteLineWithThread("FuncA");
+			WriteLineWithThreadId("FuncA");
 		}
 
 		static public void Test()
 		{
-			WriteLineWithThread("/////////////////// Appels directs");
+			WriteLineWithThreadId("/////////////////// Appels directs");
 			Func(FuncA);
 
 			Action caller = FuncA;
@@ -31,30 +31,30 @@ namespace ConsoleProj
 			Func(caller2);
 
 			Console.WriteLine("\n");
-			WriteLineWithThread("/////////////////// Appels synchrones, delegate anonymous & lambda");
-			Func(delegate { WriteLineWithThread("Anonymous delegate called"); });
-			Func(() => { WriteLineWithThread("Lambda called"); });
+			WriteLineWithThreadId("/////////////////// Appels synchrones, delegate anonymous & lambda");
+			Func(delegate { WriteLineWithThreadId("Anonymous delegate called"); });
+			Func(() => { WriteLineWithThreadId("Lambda called"); });
 
 			Console.WriteLine("\n");
-			WriteLineWithThread("/////////////////// Appels synchrones, lambda, avec exception");
+			WriteLineWithThreadId("/////////////////// Appels synchrones, lambda, avec exception");
 			try
 			{
 				Func(() => { throw new Exception("Exception raised"); });
 			}
 			catch (Exception e)
 			{
-				WriteLineWithThread(e.ToString());
+				WriteLineWithThreadId(e.ToString());
 			}
 
 			Console.WriteLine("\n");
-			WriteLineWithThread("/////////////////// Appels Asynchrones, delegate anonymous & lambda");
-			FuncAsync(delegate { WriteLineWithThread("Anonymous delegate called"); });
-			FuncAsync(() => { WriteLineWithThread("Lambda called"); });
+			WriteLineWithThreadId("/////////////////// Appels Asynchrones, delegate anonymous & lambda");
+			FuncAsync(delegate { WriteLineWithThreadId("Anonymous delegate called"); });
+			FuncAsync(() => { WriteLineWithThreadId("Lambda called"); });
 
 			Thread.Sleep(200);
 			Console.WriteLine("\n");
-			WriteLineWithThread("/////////////////// Appels Asynchrones, lambda, avec exception");
-			FuncAsync(() => { WriteLineWithThread("Lambda called"); throw new Exception("Exception raised"); });			//try/catch inutile, l'exception est levée dans le endinvoke
+			WriteLineWithThreadId("/////////////////// Appels Asynchrones, lambda, avec exception");
+			FuncAsync(() => { WriteLineWithThreadId("Lambda called"); throw new Exception("Exception raised"); });			//try/catch inutile, l'exception est levée dans le endinvoke
 		}
 
 		static void Func(System.Action f)
@@ -70,7 +70,7 @@ namespace ConsoleProj
 			}
 			catch (Exception ex)
 			{
-				WriteLineWithThread("Exception" + ex.ToString());
+				WriteLineWithThreadId("Exception" + ex.ToString());
 
 			}
 		}
@@ -82,7 +82,8 @@ namespace ConsoleProj
 		{
 			//f.Invoke();
 			AsyncCallback cb = FuncAsyncCB;	//new ?
-			IAsyncResult result = f.BeginInvoke(cb, null);
+      Object argsOrUserState = null;
+			IAsyncResult result = f.BeginInvoke(cb, argsOrUserState);
 
 			//var handle = result.AsyncWaitHandle;
 			//handle.WaitOne();
@@ -111,7 +112,7 @@ namespace ConsoleProj
 			}
 			catch (Exception e)
 			{
-				WriteLineWithThread(e.ToString());
+				WriteLineWithThreadId(e.ToString());
 			}
 		}
 	}

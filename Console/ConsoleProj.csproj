@@ -90,10 +90,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnglishFrench_DataDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="JobTest.cs" />
-    <Compile Include="JobTest2.cs" />
-    <Compile Include="JobTest3.cs" />
-    <Compile Include="JobTest4.cs" />
+    <Compile Include="Test_Generic_static.cs" />
+    <Compile Include="Test_copy_reference.cs" />
+    <Compile Include="Test_copy_struct.cs" />
+    <Compile Include="Test_lambda_capture.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,14 +11,16 @@ namespace ConsoleProj
 	{
 		static void Main(string[] args)
 		{
-			//Test_BeginInvoke.Test();
-			//test_MultipleInheritance.test();
-            //Main1.Run();
-            //Main2.Run();
-            //Main3.Run();
-            //Main4.Run();
 
-            ProgramBench.MainBench();
+            Test_Generic_static.Run();
+            Test_copy_reference.Run();
+            Test_copy_struct.Run();
+            Test_lambda_capture.Run();
+      
+      //Test_BeginInvoke.Test();
+			//test_MultipleInheritance.test();
+
+            //ProgramBench.MainBench();
 
             Console.WriteLine("Press any key ...");
             Console.ReadKey();

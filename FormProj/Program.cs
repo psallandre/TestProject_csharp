@@ -21,7 +21,8 @@ namespace FormProj
 
 			Test_EF test = new Test_EF();
 
-			Application.Run(new Form1());
+			//Application.Run(new Form1());
+      Application.Run(f2);
 		}
 	}
 }
