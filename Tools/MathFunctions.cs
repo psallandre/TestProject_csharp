@@ -58,5 +58,20 @@ namespace Tools
             }
             return old;
         }
+
+        public static IEnumerable<int> Fibonator_Iteratif()
+        {
+          //if (n < 0) throw new ArgumentOutOfRangeException();
+          int old = 0;
+          int current = 1;
+          // In N steps compute Fibonacci sequence iteratively.
+          while(true)
+          {
+            int temp = old;
+            old = current;
+            current = temp + current;
+            yield return old;
+          }
+        }
     }
 }

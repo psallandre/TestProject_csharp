@@ -90,5 +90,28 @@ namespace Tools.Test
           Assert.IsTrue(sw.ElapsedMilliseconds < 1);
       }
       #endregion
+
+     #region Fibonator
+      [TestMethod]
+      public void FibonatorShouldbeOkFor()
+      {
+        var v = MathFunctions.Fibonator_Iteratif();
+        v.Current();
+
+        //Assert.AreEqual(0, MathFunctions.Fibonator_Iteratif());
+
+        //FibonaciShouldbeOk(0, 0);
+        //FibonaciShouldbeOk(1, 1);
+        //FibonaciShouldbeOk(1, 2);
+        //FibonaciShouldbeOk(2, 3);
+        //FibonaciShouldbeOk(3, 4);
+        //FibonaciShouldbeOk(5, 5);
+        //FibonaciShouldbeOk(8, 6);
+        //FibonaciShouldbeOk(13, 7);
+        //FibonaciShouldbeOk(21, 8);
+      }
+     #endregion
+
+
    }
 }
