@@ -73,5 +73,19 @@ namespace Tools
             yield return old;
           }
         }
+
+        public static IEnumerable<int> Fibonator_Iteratif2()
+        {
+            //from http://en.wikipedia.org/wiki/Comparison_of_C_Sharp_and_Java
+            int a = 0;
+            int b = 1;
+ 
+            while (true) {
+                yield return a;
+                a += b;
+                yield return b;
+                b += a;
+            }
+        }
     }
 }
