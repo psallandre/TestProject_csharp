@@ -16,7 +16,7 @@
 	url = https://github.com/psallandre/TestProject_csharp.git
 	fetch = +refs/heads/*:refs/remotes/cloud/*
 [remote "origin"]
-	url = e:/repogit/TestProject_csharp.git
+	url = //PCPS/eShare/repoGit/TestProject_csharp.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = cloud
